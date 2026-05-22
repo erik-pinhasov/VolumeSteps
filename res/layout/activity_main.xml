@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="#FF1A1A2E">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="VolumeSteps" android:textSize="28sp" android:textColor="#FFFFFFFF"
+            android:textStyle="bold" android:gravity="center" android:layout_marginBottom="4dp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Fine-grained volume control" android:textSize="14sp"
+            android:textColor="#FF8888AA" android:gravity="center" android:layout_marginBottom="32dp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Total volume steps" android:textSize="16sp" android:textColor="#FFCCCCDD" android:layout_marginBottom="8dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="16dp">
+            <EditText android:id="@+id/steps_input" android:layout_width="0dp" android:layout_height="48dp"
+                android:layout_weight="1" android:inputType="number" android:text="200" android:textColor="#FFFFFFFF"
+                android:textSize="18sp" android:background="#FF252547" android:paddingLeft="16dp"
+                android:paddingRight="16dp" android:gravity="center_vertical" android:layout_marginRight="8dp" />
+            <Button android:id="@+id/apply_btn" android:layout_width="wrap_content" android:layout_height="48dp"
+                android:text="Apply" android:textColor="#FFFFFFFF" android:background="#FF6C63FF" />
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Step size (per key press)" android:textSize="16sp" android:textColor="#FFCCCCDD" android:layout_marginBottom="8dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="24dp">
+            <EditText android:id="@+id/stepsize_input" android:layout_width="0dp" android:layout_height="48dp"
+                android:layout_weight="1" android:inputType="number" android:text="1" android:textColor="#FFFFFFFF"
+                android:textSize="18sp" android:background="#FF252547" android:paddingLeft="16dp"
+                android:paddingRight="16dp" android:gravity="center_vertical" android:layout_marginRight="8dp" />
+            <Button android:id="@+id/apply_stepsize_btn" android:layout_width="wrap_content" android:layout_height="48dp"
+                android:text="Apply" android:textColor="#FFFFFFFF" android:background="#FF6C63FF" />
+        </LinearLayout>
+        <SeekBar android:id="@+id/volume_preview" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="4dp" />
+        <TextView android:id="@+id/volume_preview_text" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="13sp" android:textColor="#FF8888AA" android:gravity="center" android:layout_marginBottom="24dp" />
+        <Button android:id="@+id/toggle_btn" android:layout_width="match_parent" android:layout_height="52dp"
+            android:text="Enable" android:textColor="#FFFFFFFF" android:textSize="16sp" android:background="#FF4CAF50" android:layout_marginBottom="8dp" />
+        <TextView android:id="@+id/status_text" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="14sp" android:textColor="#FFAAAACC" android:gravity="center" android:layout_marginBottom="28dp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Permissions" android:textSize="16sp" android:textColor="#FFCCCCDD" android:textStyle="bold" android:layout_marginBottom="12dp" />
+        <TextView android:id="@+id/overlay_status" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="14sp" android:layout_marginBottom="6dp" />
+        <Button android:id="@+id/overlay_btn" android:layout_width="match_parent" android:layout_height="44dp"
+            android:text="Grant Overlay Permission" android:textColor="#FFFFFFFF" android:background="#FF3D3D6B"
+            android:layout_marginBottom="12dp" android:visibility="gone" />
+        <TextView android:id="@+id/accessibility_status" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="14sp" android:layout_marginBottom="6dp" />
+        <Button android:id="@+id/accessibility_btn" android:layout_width="match_parent" android:layout_height="44dp"
+            android:text="Open Accessibility Settings" android:textColor="#FFFFFFFF" android:background="#FF3D3D6B" android:layout_marginBottom="8dp" />
+        <TextView android:id="@+id/restricted_hint" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="If VolumeSteps is grayed out, tap below first, then tap the \u22ee menu and choose Allow restricted settings"
+            android:textSize="12sp" android:textColor="#FFFF9800" android:layout_marginBottom="6dp" android:visibility="gone" />
+        <Button android:id="@+id/restricted_btn" android:layout_width="match_parent" android:layout_height="44dp"
+            android:text="Open App Info (Restricted Settings)" android:textColor="#FFFFFFFF" android:background="#FF5D4E37" android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>
