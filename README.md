@@ -4,7 +4,7 @@ A minimal, open-source Android app that replaces the system's coarse ~15 volume 
 
 No internet permission. No data collection. No analytics. 3 permissions total.
 
-<img width="200" height="378" alt="Screenshot 2026-05-23 035129" src="https://github.com/user-attachments/assets/6a7ff652-80a4-426f-a22e-595ca09f18f6" />
+<img width="204" height="378" alt="Screenshot 2026-05-23 043637" src="https://github.com/user-attachments/assets/9f0b7e0a-d157-407c-b85b-0ad706559135" />
 <img width="200" height="378" alt="Screenshot_2026-05-23-03-35-12-034_com miui global packageinstaller" src="https://github.com/user-attachments/assets/981b3dfd-070b-458f-9bfa-389e0b278bae" />
 <img width="200" height="378" alt="Screenshot_2026-05-23-03-36-39-383_com volumesteps" src="https://github.com/user-attachments/assets/c2096e95-2bf3-43fb-998a-670dc3cbd39d" />
 <img width="200" height="378" alt="Screenshot_2026-05-23-03-36-59-274_com mi android globallauncher" src="https://github.com/user-attachments/assets/e7aac792-9bb9-4d72-9d14-9b72e36a1f8e" />
