@@ -1,8 +1,13 @@
 # VolumeSteps
 
-A minimal, open-source Android app that replaces the system's coarse ~15 volume levels with fine-grained control (e.g. 200 steps). Each hardware volume button press moves by a configurable step size.
+A minimal, open-source Android app that replaces the system's coarse ~15 volume levels with fine-grained control. Each hardware volume button press moves by a configurable step size.
 
 No internet permission. No data collection. No analytics. 3 permissions total.
+
+<img width="1280" height="2438" alt="Screenshot_2026-05-23-03-35-12-034_com miui global packageinstaller" src="https://github.com/user-attachments/assets/981b3dfd-070b-458f-9bfa-389e0b278bae" />
+<img width="1280" height="2411" alt="Screenshot_2026-05-23-03-36-39-383_com volumesteps" src="https://github.com/user-attachments/assets/c2096e95-2bf3-43fb-998a-670dc3cbd39d" />
+<img width="1280" height="2426" alt="Screenshot_2026-05-23-03-36-59-274_com mi android globallauncher" src="https://github.com/user-attachments/assets/e7aac792-9bb9-4d72-9d14-9b72e36a1f8e" />
+
 
 ## Is this safe?
 
@@ -38,24 +43,12 @@ No internet permission. No data collection. No analytics. 3 permissions total.
 2. Install, open VolumeSteps
 3. Grant overlay permission
 4. Enable accessibility service
-5. **Android 13+:** If grayed out, tap "Open App Info" button → ⋮ menu → Allow restricted settings → go back and enable
-6. Set total steps and step size, tap Apply
+**If grayed out, tap "Open App Info" button → ⋮ menu → Allow restricted settings → go back and enable
+5. Set total steps and step size, tap Apply
 
 ## How it works
 
 Maps N custom steps across the system's ~15 volume levels using `android.media.audiofx.Equalizer` gain offsets for sub-level granularity. A `MediaSession` with `VolumeProvider` handles screen-off volume keys.
-
-## Architecture
-
-```
-src/com/volumesteps/
-├── MainActivity.java          # UI
-├── VolumeKeyService.java      # AccessibilityService: keys, MediaSession, overlay
-├── VolumeStepController.java  # Core: step mapping, EQ gain offsets
-├── VolumeOverlay.java         # Floating vertical bar
-├── AudioSessionReceiver.java  # Attaches EQ to audio sessions
-└── Compat.java                # Vibration API helpers
-```
 
 ## Building from source
 
@@ -74,7 +67,3 @@ aapt package -f -S res -M AndroidManifest.xml -I $ANDROID_JAR -F build/app.apk
 zipalign -f 4 build/app.apk build/app-aligned.apk
 apksigner sign --ks your-key.jks --out build/VolumeSteps.apk build/app-aligned.apk
 ```
-
-## License
-
-MIT
